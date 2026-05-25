@@ -41,7 +41,7 @@ Reviews were collected using Selenium-based web scraping from each platform's pu
 
 ## Data Availability
 
-Due to platform terms of service, full review texts are not redistributed. Tokenized versions are provided in `data/`. Full texts can be reconstructed by running the scraping scripts, though platform content may have changed since the original collection (2024).
+Due to platform terms of service, full review texts are not redistributed. Tokenized versions are provided in `data/`. Full texts can be reconstructed by running the scraping scripts, though platform content may have changed since the original collection (2025).
 
 ## Requirements
 
