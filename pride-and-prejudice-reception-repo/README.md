@@ -9,7 +9,6 @@ This repository contains the code and processed data for a study examining how J
 ```
 ├── README.md
 ├── code/
-│   ├── scraping.ipynb          # Review collection from Watchapedia, Aladin, IMDb
 │   ├── korean_analysis.ipynb   # Korean morphological analysis + collocation (kiwipiepy)
 │   └── imdb_analysis.ipynb     # English tokenization + collocation analysis
 ├── data/
@@ -17,18 +16,23 @@ This repository contains the code and processed data for a study examining how J
 │   ├── korean_reviews_tokenized.csv   # Tokenized Korean reviews (film + book)
 │   └── english_reviews_tokenized.csv  # Tokenized IMDb reviews
 └── results/
-    ├── collocation_korean.csv         # Korean collocation tables (MI, T-score, LL)
-    └── collocation_english.csv        # English collocation tables (MI, T-score, LL)
+    ├── korean/
+    │   ├── collocation_father.csv
+    │   ├── collocation_dad.csv
+    │   └── collocation_bennet.csv
+    └── english/
+        ├── collocation_father.csv
+        └── collocation_mr_bennet.csv
 ```
 
 ## Methodology
 
 ### Data Collection
-- **Korean film reviews**: 3,527 reviews from [Watchapedia](https://pedia.watcha.com/)
-- **Korean book reviews**: 647 reviews from [Aladin](https://www.aladin.co.kr/)
-- **English film reviews**: 1,099 reviews from [IMDb](https://www.imdb.com/)
 
-Reviews were collected using Selenium-based web scraping (see `code/scraping.ipynb`).
+- **Korean film reviews**: 3,527 reviews from [Watchapedia](https://pedia.watcha.com/ko-KR/contents/mOk6ZMW)
+- **Korean book reviews**: 639 reviews from [Aladin](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=436838)
+- **English film reviews**: 1,099 reviews from [IMDb](https://www.imdb.com/title/tt0414387/reviews/)
+Reviews were collected using Selenium-based web scraping from each platform's public review pages.
 
 ### Analysis
 - **Korean**: Morphological analysis via [kiwipiepy](https://github.com/bab2min/kiwipiepy), followed by collocation analysis (log-likelihood, MI, T-score) with target lemmas "아버지" (father) and "아빠" (dad)
@@ -55,8 +59,7 @@ tqdm
 If you use this code or data, please cite:
 
 ```
-[Author]. "Patriarchal Myth in Adaptation: A Cross-Cultural Analysis of 
-Pride and Prejudice Reviews." [Journal/Institution], [Year].
+Yeseul Park. "Evolving Patriarchy:Two Different Mr. Bennets in Pride and Prejudice (1813) and Pride and Prejudice (2005)." Under review, 2026.
 ```
 
 ## License
